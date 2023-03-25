@@ -4,6 +4,8 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "PackerCompile",
 })
 
+vim.g.mapleader = ' '
+
 require 'plugins'
 require 'keymaps'
 require 'p-lualine'
@@ -12,7 +14,6 @@ if vim.g.vscode then
   -- VSCode extension
 else
   -- ordinary Neovim
-  vim.g.mapleader = ' '
   vim.o.ignorecase = true
   vim.o.smartcase = true
   vim.o.splitright = true
