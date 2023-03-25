@@ -1,4 +1,11 @@
-require('keymaps')
+-- auto compile update plugins.lua as a trigger
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "plugins.lua" },
+  command = "PackerCompile",
+})
+
+require 'plugins'
+require 'keymaps'
 
 if vim.g.vscode then
   -- VSCode extension
