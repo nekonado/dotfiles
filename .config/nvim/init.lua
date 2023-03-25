@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 require 'plugins'
 require 'keymaps'
+require 'p-lualine'
 
 if vim.g.vscode then
   -- VSCode extension

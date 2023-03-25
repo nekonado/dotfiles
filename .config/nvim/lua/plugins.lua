@@ -10,6 +10,10 @@ require('packer').startup(function()
   -- -- この場合は opt だけで読み込む契機を指定していないため、
   -- -- packadd コマンドを叩かない限り読み込まれることはありません。
   -- use { "wbthomason/packer.nvim", opt = true }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
   -- -- packer.nvim 自体を遅延読み込みにする理由はまた後ほど。
   -- 
   -- -- コマンドを叩いたときに読み込む。
