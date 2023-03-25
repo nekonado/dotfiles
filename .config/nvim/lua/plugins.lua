@@ -1,19 +1,24 @@
 vim.cmd.packadd 'packer.nvim'
 
 require('packer').startup(function()
+  -- start
+  use 'vim-jp/vimdoc-ja'
+  -- opt
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+end)
+
+-- require('packer').startup(function()
   -- -- 起動時に読み込むプラグインは名前を書くだけです
   -- use "tpope/vim-fugitive"
   -- use "tpope/vim-repeat"
-  use 'vim-jp/vimdoc-ja'
   -- 
   -- -- opt オプションを付けると遅延読み込みになります。
   -- -- この場合は opt だけで読み込む契機を指定していないため、
   -- -- packadd コマンドを叩かない限り読み込まれることはありません。
   -- use { "wbthomason/packer.nvim", opt = true }
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
   -- -- packer.nvim 自体を遅延読み込みにする理由はまた後ほど。
   -- 
   -- -- コマンドを叩いたときに読み込む。
@@ -71,9 +76,9 @@ require('packer').startup(function()
   -- 
   -- -- 依存関係も管理できます。vim-prettyprint は capture.vim に依存しています。
   -- use {
- --   "tyru/capture.vim",
+  --   "tyru/capture.vim",
   --   requires = {
   --     { "thinca/vim-prettyprint" },
   --   },
   -- }
-end)
+-- end)
