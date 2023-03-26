@@ -3,6 +3,7 @@ vim.cmd.packadd 'packer.nvim'
 require('packer').startup(function()
   -- start
   use 'vim-jp/vimdoc-ja'
+  use "EdenEast/nightfox.nvim"
   -- opt
   use {
     'nvim-lualine/lualine.nvim',

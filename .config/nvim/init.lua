@@ -4,8 +4,10 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "PackerCompile",
 })
 
-vim.g.mapleader = ' '
+-- Colorscheme
+vim.cmd 'colorscheme nightfox'
 
+vim.g.mapleader = ' '
 require 'plugins'
 require 'keymaps'
 require 'p-lualine'
