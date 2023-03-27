@@ -1,4 +1,3 @@
--- auto compile update plugins.lua as a trigger
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { "plugins.lua" },
   command = "PackerCompile",
@@ -12,6 +11,9 @@ require 'plugins'
 require 'keymaps'
 require 'p-lualine'
 
+-- open filer
+-- :Neotree
+-- require("neo-tree").paste_default_config()
 if vim.g.vscode then
   -- VSCode extension
 else
