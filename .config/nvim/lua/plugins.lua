@@ -1,13 +1,16 @@
 vim.cmd.packadd 'packer.nvim'
 
 require('packer').startup(function()
-  -- -> start
-
+  -- -----------
+  -- start
+  -- -----------
   -- vimdoc-ja
   use 'vim-jp/vimdoc-ja'
 
   -- nightfox.nvim
-  use "EdenEast/nightfox.nvim"
+  -- use "EdenEast/nightfox.nvim"
+  -- tokyonight.nvim
+  use 'folke/tokyonight.nvim'
 
   -- neo-tree.nvim
   -- Unless you are still migrating, remove the deprecated commands from v1.x
@@ -21,15 +24,15 @@ require('packer').startup(function()
         "MunifTanjim/nui.nvim",
       }
   }
-  -- <- start
-  -- -> opt
 
+  -- -----------
+  -- opt
+  -- -----------
   -- lualine.nvim
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  -- <- opt
 end)
 
 -- require('packer').startup(function()

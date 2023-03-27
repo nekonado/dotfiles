@@ -4,16 +4,13 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 -- Colorscheme
-vim.cmd 'colorscheme nightfox'
+vim.cmd 'colorscheme tokyonight'
 
 vim.g.mapleader = ' '
 require 'plugins'
 require 'keymaps'
 require 'p-lualine'
 
--- open filer
--- :Neotree
--- require("neo-tree").paste_default_config()
 if vim.g.vscode then
   -- VSCode extension
 else
