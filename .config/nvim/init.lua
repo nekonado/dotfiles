@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 -- Colorscheme
-vim.cmd 'colorscheme tokyonight'
+vim.cmd 'colorscheme tokyonight-night'
 
 vim.g.mapleader = ' '
 require 'plugins'
