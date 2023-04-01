@@ -1,0 +1,15 @@
+add_newline = true
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+
+[character]
+error_symbol = "[❯](bold red)"
+success_symbol = "[❯](bold green)"
+
+[package]
+disabled = true
+
+[git_branch]
+symbol = " "
