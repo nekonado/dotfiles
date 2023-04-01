@@ -7,9 +7,8 @@ require('packer').startup(function()
   -- vimdoc-ja
   use 'vim-jp/vimdoc-ja'
 
-  -- nightfox.nvim
+  -- Color Scheme
   -- use "EdenEast/nightfox.nvim"
-  -- tokyonight.nvim
   use 'folke/tokyonight.nvim'
 
   -- neo-tree.nvim

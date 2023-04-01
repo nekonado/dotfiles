@@ -15,6 +15,7 @@ if vim.g.vscode then
   -- VSCode extension
 else
   -- ordinary Neovim
+  vim.opt.helplang = 'ja', 'en'
   vim.o.ignorecase = true
   vim.o.smartcase = true
   vim.o.splitright = true
