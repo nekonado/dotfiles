@@ -9,7 +9,7 @@ vim.cmd 'colorscheme tokyonight-night'
 vim.g.mapleader = ' '
 require 'plugins'
 require 'keymaps'
-require 'p-lualine'
+require 'plugs/lualine'
 
 if vim.g.vscode then
   -- VSCode extension
