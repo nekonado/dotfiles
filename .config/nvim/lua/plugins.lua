@@ -11,6 +11,8 @@ require('packer').startup(function()
   -- use "EdenEast/nightfox.nvim"
   use 'folke/tokyonight.nvim'
 
+  use 'tkmpypy/chowcho.nvim'
+
   -- neo-tree.nvim
   -- Unless you are still migrating, remove the deprecated commands from v1.x
   vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
@@ -34,7 +36,7 @@ require('packer').startup(function()
   -- -----------
   -- opt
   -- -----------
-  -- lualine.nvim
+  use{ 'wbthomason/packer.nvim', opt = true}
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
