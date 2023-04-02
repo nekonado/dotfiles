@@ -4,7 +4,7 @@ local wezterm = require 'wezterm'
 
 return {
 	color_scheme = 'tokyonight_night',
-	window_background_opacity = 0.93,
+	window_background_opacity = 1.00,
   -- font = wezterm.font("Firge35Nerd Console"),
   font_size = 12.0,
   window_frame = {
