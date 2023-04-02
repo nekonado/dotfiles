@@ -11,7 +11,7 @@ require 'plugins'
 require 'keymaps'
 -- require 'plugs/lualine'
 -- require 'plugs/chowcho'
-require 'rs/init'
+require 'rs/index'
 
 if vim.g.vscode then
   -- VSCode extension
