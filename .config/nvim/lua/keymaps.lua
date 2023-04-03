@@ -8,7 +8,8 @@ vim.keymap.set('t', '<C-c>', '<C-\\><C-n>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>a', 'ggVG', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>e', '<Cmd>Neotree<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>w', '<Cmd>Chowcho<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>h', '<Cmd>HopWord<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'hhw', '<Cmd>HopWord<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'hhp', '<Cmd>HopPattern<CR>', { noremap = true, silent = true })
 
 -- Build-in LSP Function
 vim.keymap.set('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
