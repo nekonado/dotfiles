@@ -2,3 +2,5 @@
 require 'rs/lualine'
 require 'rs/chowcho'
 require 'rs/nvim-treesitter'
+require 'rs/mason'
+require 'rs/cmp'
