@@ -18,6 +18,14 @@ require('packer').startup(function()
      run = ':TSUpdate'
   }
 
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2',
+    config = function()
+      require'hop'.setup {}
+    end
+  }
+
   -- neo-tree.nvim
   -- Unless you are still migrating, remove the deprecated commands from v1.x
   vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
