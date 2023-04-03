@@ -1,4 +1,5 @@
 vim.keymap.set('i', 'jj', '<ESC>', { noremap = true, silent = true })
+vim.keymap.set('t', '<C-c>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 -- leader key
 vim.keymap.set('n', '<leader>a', 'ggVG', { noremap = true, silent = true })
