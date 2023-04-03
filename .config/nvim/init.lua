@@ -9,8 +9,6 @@ vim.cmd 'colorscheme tokyonight-night'
 vim.g.mapleader = ' '
 require 'plugins'
 require 'keymaps'
--- require 'plugs/lualine'
--- require 'plugs/chowcho'
 require 'rs/index'
 
 if vim.g.vscode then
