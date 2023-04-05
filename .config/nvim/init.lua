@@ -2,43 +2,14 @@ if vim.g.vscode then
   -- VSCode extension
 else
   -- ordinary Neovim
-  vim.opt.helplang = 'ja'
-  vim.o.ignorecase = true
-  vim.o.smartcase = true
-  vim.o.splitright = true
-  vim.o.termguicolors = true
-  vim.o.hidden = true
-  vim.o.updatetime = 300
-  vim.bo.expandtab = true
-  vim.o.termguicolors = true
-  vim.bo.autoindent = true
-  vim.bo.smartindent = true
-  vim.bo.tabstop = 2
-  vim.bo.shiftwidth = 2
-  vim.bo.autoread = true
-  vim.wo.number = true
-  vim.wo.relativenumber = true
-  vim.wo.signcolumn = 'yes'
-  vim.wo.cursorline = true
-  vim.cmd 'set clipboard+=unnamedplus'
-
-  vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-    pattern = { 'plugins.lua' },
-    command = 'PackerCompile',
-  })
 
   vim.g.mapleader = ' '
+
   require 'plugins'
   require 'keymaps'
-  require 'rs/index'
-
-  -- Restore cursor position when file is opened
-  vim.api.nvim_create_autocmd({ 'BufReadPost' }, {
-    pattern = { '*' },
-    callback = function()
-      vim.api.nvim_exec('silent! normal! g`"zv', false)
-    end,
-  })
+  require 'autocmds'
+  require 'options'
+  require 'rs'
 
   -- LSP handlers
   vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -61,4 +32,5 @@ else
   -- Colorscheme
   vim.cmd 'colorscheme tokyonight-night'
 
+  vim.cmd 'set clipboard+=unnamedplus'
 end
