@@ -36,6 +36,10 @@ require('packer').startup(function()
     requires = {"kkharji/sqlite.lua"}
   }
 
+  use 'simeji/winresizer'
+
+  use 'tpope/vim-commentary'
+
   use {
     'phaazon/hop.nvim',
     branch = 'v2',
