@@ -26,3 +26,19 @@ autocmd({ 'BufReadPost' }, {
     vim.api.nvim_exec('silent! normal! g`"zv', false)
   end,
 })
+
+autocmd('TermOpen',  {
+  pattern = '*',
+  command = ':startinsert'
+})
+
+
+autocmd('TermOpen', {
+  pattern = '*',
+  command = 'setlocal norelativenumber'
+})
+
+autocmd('TermOpen', {
+  pattern = '*',
+  command = 'setlocal nonumber'
+})

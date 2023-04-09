@@ -11,12 +11,11 @@ keymap('n', '<C-l>', '<C-w>l', opts)
 keymap('n', ';', ':', opts)
 keymap("i", ",", ",<Space>", opts)
 
-keymap("n", "dw", 'vb"_d', opts)
-
 -- HopNvim
 keymap('n', 'hw', '<cmd>HopWord<CR>', opts)
 keymap('n', 'hp', '<cmd>HopPattern<CR>', opts)
 keymap('n', 'ht', '<cmd>HopChar2<CR>', opts)
+
 -- terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', opts)
 keymap('t', '<C-c>', '<C-\\><C-n>', opts)
@@ -27,6 +26,18 @@ keymap('n', '<leader>e', '<cmd>Neotree<CR>', opts)
 keymap('n', '<leader>h', '^', opts)
 keymap('n', '<leader>l', '$', opts)
 keymap('n', '<leader>w', '<cmd>Chowcho<CR>', opts)
+
+-- Telescope
+keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', {})
+keymap('n', '<leader>fa', '<cmd>Telescope find_files hidden=true<CR>', {})
+keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', {})
+keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', {})
+keymap('n', '<leader>fh', '<cmd>Telescope help_tags', {})
+
+-- ToggleTerm
+keymap('n', 'tx', '<cmd>ToggleTerm direction=horizontal<CR>', opts)
+keymap('n', '2tx', '<cmd>2 ToggleTerm direction=horizontal<CR>',  opts)
+keymap('n', '3tx', '<cmd>3 ToggleTerm direction=horizontal<CR>',  opts)
 
 -- Build-in LSP Function
 keymap('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>')

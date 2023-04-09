@@ -19,10 +19,31 @@ require('packer').startup(function()
   }
 
   use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1'
+  }
+
+  use {
+    "nvim-telescope/telescope-frecency.nvim",
+    config = function()
+      require"telescope".load_extension("frecency")
+    end,
+    requires = {"kkharji/sqlite.lua"}
+  }
+
+  use {
     'phaazon/hop.nvim',
     branch = 'v2',
     config = function()
       require'hop'.setup {}
+    end
+  }
+
+  use {
+    'akinsho/toggleterm.nvim',
+    tag = '*',
+    config = function()
+      require("toggleterm").setup()
     end
   }
 
