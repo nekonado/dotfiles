@@ -35,9 +35,9 @@ keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', {})
 keymap('n', '<leader>fh', '<cmd>Telescope help_tags', {})
 
 -- ToggleTerm
-keymap('n', 'tx', '<cmd>ToggleTerm direction=horizontal<CR>', opts)
-keymap('n', '2tx', '<cmd>2 ToggleTerm direction=horizontal<CR>',  opts)
-keymap('n', '3tx', '<cmd>3 ToggleTerm direction=horizontal<CR>',  opts)
+keymap('n', '<leader>tx', '<cmd>ToggleTerm direction=horizontal<CR>', opts)
+keymap('n', '<leader>2tx', '<cmd>2 ToggleTerm direction=horizontal<CR>',  opts)
+keymap('n', '<leader>3tx', '<cmd>3 ToggleTerm direction=horizontal<CR>',  opts)
 
 -- Build-in LSP Function
 keymap('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
