@@ -17,6 +17,11 @@ require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use {
+    'm-demare/hlargs.nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter' }
+  }
+  use 'p00f/nvim-ts-rainbow'
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -47,9 +52,17 @@ require('packer').startup(function()
     end
   }
 
+  -- Git
   use {
     'TimUntersberger/neogit',
     requires = 'nvim-lua/plenary.nvim'
+  }
+
+  use {
+    'kwkarlwang/bufresize.nvim',
+    config = function()
+      require("bufresize").setup()
+    end
   }
 
   -- LSP
@@ -60,6 +73,16 @@ require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/vim-vsnip'
+
+  use 'onsails/lspkind.nvim'
+  use 'hrsh7th/cmp-path'
+
+  use 'kkharji/lspsaga.nvim'
+  use 'folke/lsp-colors.nvim'
+  use {
+    'folke/trouble.nvim',
+    requires = 'nvim-tree/nvim-web-devicons',
+  }
 
   -- neo-tree.nvim
   -- Unless you are still migrating, remove the deprecated commands from v1.x

@@ -30,7 +30,7 @@ else
   ]]
 
   -- Colorscheme
-  vim.cmd 'colorscheme tokyonight-night'
+  vim.cmd 'colorscheme tokyonight-moon'
 
   vim.cmd 'set clipboard+=unnamedplus'
 end

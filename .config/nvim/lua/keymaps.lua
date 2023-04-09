@@ -41,6 +41,9 @@ keymap('n', '<leader>2th', '<cmd>2 ToggleTerm direction=horizontal<CR>', opts)
 keymap('n', '<leader>3th', '<cmd>3 ToggleTerm direction=horizontal<CR>', opts)
 keymap('n', '<leader>tt', '<cmd>ToggleTermToggleAll<CR>', opts)
 
+-- Trouble
+keymap('n', '<leader>xx', '<cmd>TroubleToggle<CR>', opts)
+
 -- Build-in LSP Function
 keymap('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
 keymap('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
