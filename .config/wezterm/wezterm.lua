@@ -4,13 +4,20 @@ local wezterm = require 'wezterm'
 local config = {}
 
 config = {
-  color_scheme = 'tokyonight_night',
-  window_background_opacity = 1.00,
-  text_background_opacity = 1.00,
-  font_size = 12.0,
-  window_frame = {
-    font_size = 10.0,
+  keys = {
+    -- ctrl+'-'で上下に分割
+    { key = "-",  mods = "CTRL", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
+    -- ctrl+'|'で左右で分割
+    { key = "\\", mods = "CTRL", action = wezterm.action { SplitHorizontal = { domain = "CurrentPaneDomain" } } },
+    -- ctrl+'w'でpaneを閉じる
+    { key = "w",  mods = "CTRL", action = wezterm.action.CloseCurrentPane { confirm = false } }
   },
+  color_scheme = 'tokyonight_night',
+  font_size = 14.0,
+  text_background_opacity = 0.70,
+  window_background_opacity = 0.50,
+  window_padding = { top = 0, bottom = 0 },
+  window_frame = { font_size = 10.0 },
 }
 
 return config

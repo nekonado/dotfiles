@@ -1,6 +1,8 @@
 local opt = vim.opt
 
 opt.helplang = 'ja'
+opt.encoding = 'utf-8'
+opt.fileencoding = 'utf-8'
 opt.smartcase = true
 opt.splitright = true
 opt.termguicolors = true
