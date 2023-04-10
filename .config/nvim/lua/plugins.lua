@@ -8,12 +8,8 @@ require('packer').startup(function()
   use 'vim-jp/vimdoc-ja'
 
   -- Color Scheme
-  -- use "EdenEast/nightfox.nvim"
+  use "EdenEast/nightfox.nvim"
   use 'folke/tokyonight.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
 
   use 'tkmpypy/chowcho.nvim'
 
@@ -35,9 +31,9 @@ require('packer').startup(function()
   use {
     "nvim-telescope/telescope-frecency.nvim",
     config = function()
-      require "telescope".load_extension("frecency")
+      require"telescope".load_extension("frecency")
     end,
-    requires = { "kkharji/sqlite.lua" }
+    requires = {"kkharji/sqlite.lua"}
   }
 
   use 'simeji/winresizer'
@@ -48,7 +44,7 @@ require('packer').startup(function()
     'phaazon/hop.nvim',
     branch = 'v2',
     config = function()
-      require 'hop'.setup {}
+      require'hop'.setup {}
     end
   }
 
@@ -65,7 +61,6 @@ require('packer').startup(function()
     'TimUntersberger/neogit',
     requires = 'nvim-lua/plenary.nvim'
   }
-  use 'lewis6991/gitsigns.nvim'
 
   use {
     'kwkarlwang/bufresize.nvim',
@@ -108,15 +103,15 @@ require('packer').startup(function()
   -- Greeter 4 Neovim
   use {
     'goolord/alpha-nvim',
-    config = function()
-      require 'alpha'.setup(require 'alpha.themes.startify'.config)
+    config = function ()
+      require'alpha'.setup(require'alpha.themes.startify'.config)
     end
   }
 
   -- -----------
   -- opt
   -- -----------
-  use { 'wbthomason/packer.nvim', opt = true }
+  use{ 'wbthomason/packer.nvim', opt = true}
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -124,74 +119,74 @@ require('packer').startup(function()
 end)
 
 -- require('packer').startup(function()
--- -- 起動時に読み込むプラグインは名前を書くだけです
--- use "tpope/vim-fugitive"
--- use "tpope/vim-repeat"
---
--- -- opt オプションを付けると遅延読み込みになります。
--- -- この場合は opt だけで読み込む契機を指定していないため、
--- -- packadd コマンドを叩かない限り読み込まれることはありません。
--- use { "wbthomason/packer.nvim", opt = true }
--- -- packer.nvim 自体を遅延読み込みにする理由はまた後ほど。
---
--- -- コマンドを叩いたときに読み込む。
--- use { "rhysd/git-messenger.vim", opt = true, cmd = { "GitMessenger" } }
---
--- -- 特定のイベントで読み込む
--- use { "tpope/vim-unimpaired", opt = true, event = { "FocusLost", "CursorHold" } }
---
--- -- 特定のファイルタイプのファイルを開いたら読み込む
--- use { "fatih/vim-go", opt = true, ft = { "go" } }
---
--- -- 特定のキーを叩いたら読み込む
--- -- この例ではノーマルモードの <CR> にマッピングしていますが、
--- -- モードを指定する場合はテーブルを入れ子にします。
--- -- keys = {
--- --   { "n", "<CR>" },
--- --   { "v", "<CR>" },
--- -- }
--- use {
---   "arecarn/vim-fold-cycle",
---   opt = true,
---   keys = { "<CR>" },
--- }
---
--- -- 特定の VimL 関数を呼ぶと読み込む
--- -- この例だと、任意の場所で Artify("hoge", "bold") のように呼び出された時に、
--- -- このプラグインも読み込まれます。
--- use { "sainnhe/artify.vim", opt = true, fn = { "Artify" } }
---
--- -- 実は opt = true は省略できます。読み込む契機（この例では cmd）を指定すると、
--- -- 自動的に遅延読み込みとみなされます。
--- use {
---   "npxbr/glow.nvim",
---   cmd = { "Glow", "GlowInstall" },
---   -- run オプションを指定すると、インストール時・更新時に
---   -- 実行するコマンドを指定できます。
---   run = [[:GlowInstall]],
---   -- 先頭に : がついていないなら bash -c "..." で実行されます。
---   -- run = [[npm install]],
---   -- 関数も指定可能です。
---   -- run = function()
---   --   vim.cmd.GlowInstall()
---   -- end,
--- }
---
--- -- 条件が真の時のみ読み込みます。条件は起動時に毎回判定されます。
--- use {
---   "thinca/vim-fontzoom",
---   cond = [[vim.fn.has"gui" == 1]], -- GUI の時のみ読み込む。
---   -- 関数も指定できます。
---   -- conf = function()
---   --   return vim.fn.has "gui" == 1
---   -- end,
--- }
---
--- -- 依存関係も管理できます。vim-prettyprint は capture.vim に依存しています。
--- use {
---   "tyru/capture.vim",
---   requires = {
---     { "thinca/vim-prettyprint" },
---   },
--- }
+  -- -- 起動時に読み込むプラグインは名前を書くだけです
+  -- use "tpope/vim-fugitive"
+  -- use "tpope/vim-repeat"
+  --
+  -- -- opt オプションを付けると遅延読み込みになります。
+  -- -- この場合は opt だけで読み込む契機を指定していないため、
+  -- -- packadd コマンドを叩かない限り読み込まれることはありません。
+  -- use { "wbthomason/packer.nvim", opt = true }
+  -- -- packer.nvim 自体を遅延読み込みにする理由はまた後ほど。
+  --
+  -- -- コマンドを叩いたときに読み込む。
+  -- use { "rhysd/git-messenger.vim", opt = true, cmd = { "GitMessenger" } }
+  --
+  -- -- 特定のイベントで読み込む
+  -- use { "tpope/vim-unimpaired", opt = true, event = { "FocusLost", "CursorHold" } }
+  --
+  -- -- 特定のファイルタイプのファイルを開いたら読み込む
+  -- use { "fatih/vim-go", opt = true, ft = { "go" } }
+  --
+  -- -- 特定のキーを叩いたら読み込む
+  -- -- この例ではノーマルモードの <CR> にマッピングしていますが、
+  -- -- モードを指定する場合はテーブルを入れ子にします。
+  -- -- keys = {
+  -- --   { "n", "<CR>" },
+  -- --   { "v", "<CR>" },
+  -- -- }
+  -- use {
+  --   "arecarn/vim-fold-cycle",
+  --   opt = true,
+  --   keys = { "<CR>" },
+  -- }
+  --
+  -- -- 特定の VimL 関数を呼ぶと読み込む
+  -- -- この例だと、任意の場所で Artify("hoge", "bold") のように呼び出された時に、
+  -- -- このプラグインも読み込まれます。
+  -- use { "sainnhe/artify.vim", opt = true, fn = { "Artify" } }
+  --
+  -- -- 実は opt = true は省略できます。読み込む契機（この例では cmd）を指定すると、
+  -- -- 自動的に遅延読み込みとみなされます。
+  -- use {
+  --   "npxbr/glow.nvim",
+  --   cmd = { "Glow", "GlowInstall" },
+  --   -- run オプションを指定すると、インストール時・更新時に
+  --   -- 実行するコマンドを指定できます。
+  --   run = [[:GlowInstall]],
+  --   -- 先頭に : がついていないなら bash -c "..." で実行されます。
+  --   -- run = [[npm install]],
+  --   -- 関数も指定可能です。
+  --   -- run = function()
+  --   --   vim.cmd.GlowInstall()
+  --   -- end,
+  -- }
+  --
+  -- -- 条件が真の時のみ読み込みます。条件は起動時に毎回判定されます。
+  -- use {
+  --   "thinca/vim-fontzoom",
+  --   cond = [[vim.fn.has"gui" == 1]], -- GUI の時のみ読み込む。
+  --   -- 関数も指定できます。
+  --   -- conf = function()
+  --   --   return vim.fn.has "gui" == 1
+  --   -- end,
+  -- }
+  --
+  -- -- 依存関係も管理できます。vim-prettyprint は capture.vim に依存しています。
+  -- use {
+  --   "tyru/capture.vim",
+  --   requires = {
+  --     { "thinca/vim-prettyprint" },
+  --   },
+  -- }
 -- end)
