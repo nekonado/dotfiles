@@ -60,6 +60,8 @@ require('packer').startup(function()
     end
   }
 
+  use 'akinsho/nvim-bufferline.lua'
+
   -- Git
   use {
     'TimUntersberger/neogit',
@@ -73,6 +75,10 @@ require('packer').startup(function()
       require("bufresize").setup()
     end
   }
+  
+  -- For React
+  use 'windwp/nvim-ts-autotag' 
+  use 'windwp/nvim-autopairs'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -82,9 +88,12 @@ require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/cmp-buffer'
 
   use 'onsails/lspkind.nvim'
   use 'hrsh7th/cmp-path'
+
+  use "L3MON4D3/LuaSnip"
 
   use 'kkharji/lspsaga.nvim'
   use 'folke/lsp-colors.nvim'
