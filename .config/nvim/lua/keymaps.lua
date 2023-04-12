@@ -33,6 +33,7 @@ keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', {})
 keymap('n', '<leader>fa', '<cmd>Telescope find_files hidden=true<CR>', {})
 keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', {})
 keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', {})
+keymap('n', '<leader>fr', '<cmd>Telescope registers<CR>', {})
 keymap('n', '<leader>fh', '<cmd>Telescope help_tags', {})
 
 -- ToggleTerm

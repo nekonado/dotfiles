@@ -15,6 +15,8 @@ require('packer').startup(function()
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
 
+  use 'petertriho/nvim-scrollbar'
+
   use 'tkmpypy/chowcho.nvim'
 
   use {
@@ -67,7 +69,13 @@ require('packer').startup(function()
     'TimUntersberger/neogit',
     requires = 'nvim-lua/plenary.nvim'
   }
-  use 'lewis6991/gitsigns.nvim'
+  use {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require('gitsigns').setup()
+      require("scrollbar.handlers.gitsigns").setup()
+    end
+  }
 
   use {
     'kwkarlwang/bufresize.nvim',
