@@ -29,8 +29,5 @@ else
   --   augroup ENiD
   -- ]]
 
-  -- Colorscheme
-  -- vim.cmd 'colorscheme tokyonight-moon'
-
   vim.cmd 'set clipboard+=unnamedplus'
 end
