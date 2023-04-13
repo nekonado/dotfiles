@@ -1,2 +1,2 @@
-  vim.cmd[[set nowrap]]
-  vim.cmd[[set clipboard+=unnamedplus]]
+vim.cmd [[set nowrap]]
+vim.cmd [[set clipboard+=unnamedplus]]

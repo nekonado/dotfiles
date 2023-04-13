@@ -29,10 +29,11 @@ require('packer').startup(function()
   }
   use 'p00f/nvim-ts-rainbow'
 
-  use {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.1'
-  }
+  -- use {
+  --   'nvim-telescope/telescope.nvim',
+  --   tag = '0.1.1'
+  -- }
+  use 'nvim-telescope/telescope.nvim'
 
   use {
     "nvim-telescope/telescope-frecency.nvim",
@@ -83,9 +84,9 @@ require('packer').startup(function()
       require("bufresize").setup()
     end
   }
-  
+
   -- For React
-  use 'windwp/nvim-ts-autotag' 
+  use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
 
   -- LSP
@@ -97,18 +98,25 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
 
   use 'onsails/lspkind.nvim'
-  use 'hrsh7th/cmp-path'
 
   use "L3MON4D3/LuaSnip"
 
-  use 'kkharji/lspsaga.nvim'
+  -- use 'kkharji/lspsaga.nvim'
   use 'folke/lsp-colors.nvim'
   use {
     'folke/trouble.nvim',
     requires = 'nvim-tree/nvim-web-devicons',
   }
+
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jayp0521/mason-null-ls.nvim'
+  use 'stevearc/dressing.nvim'
+  use 'tami5/lspsaga.nvim'
+  -- use "glepnir/lspsaga.nvim"
+  use 'ray-x/lsp_signature.nvim'
 
   -- neo-tree.nvim
   -- Unless you are still migrating, remove the deprecated commands from v1.x
