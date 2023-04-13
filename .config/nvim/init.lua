@@ -5,6 +5,7 @@ else
 
   vim.g.mapleader = ' '
 
+  require 'bases'
   require 'plugins'
   require 'keymaps'
   require 'autocmds'
@@ -26,8 +27,6 @@ else
   --     autocmd!
   --     autocmd CursorHold,CursorHoldI * lua vim.lsp.buf.document_highlight()
   --     autocmd CursorMoved,CursorMovedI * lua vim.lsp.buf.clear_references()
-  --   augroup ENiD
+  --   augroup END
   -- ]]
-
-  vim.cmd 'set clipboard+=unnamedplus'
 end
