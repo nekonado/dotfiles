@@ -9,8 +9,8 @@ config = {
     { key = "-",  mods = "CTRL", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
     -- ctrl+'|'で左右で分割
     { key = "\\", mods = "CTRL", action = wezterm.action { SplitHorizontal = { domain = "CurrentPaneDomain" } } },
-    -- ctrl+'w'でpaneを閉じる
-    { key = "w",  mods = "CTRL", action = wezterm.action.CloseCurrentPane { confirm = false } }
+    -- ctrl+'['でpane間を移動
+    { key = '[',  mods = 'CTRL', action = wezterm.action.PaneSelect }
   },
   colors = { split = '#ff8700' },
   color_scheme = 'tokyonight_night',
