@@ -42,6 +42,7 @@ keymap('n', '<leader>th', '<cmd>ToggleTerm direction=horizontal<CR>', opts)
 keymap('n', '<leader>2th', '<cmd>2 ToggleTerm direction=horizontal<CR>', opts)
 keymap('n', '<leader>3th', '<cmd>3 ToggleTerm direction=horizontal<CR>', opts)
 keymap('n', '<leader>tt', '<cmd>ToggleTermToggleAll<CR>', opts)
+keymap('n', '<leader>tf', '<cmd>ToggleTerm direction=float<CR>', opts)
 
 -- Trouble
 keymap('n', '<leader>xx', '<cmd>TroubleToggle<CR>', opts)
