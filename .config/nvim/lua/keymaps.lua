@@ -3,6 +3,9 @@ local keymap = vim.keymap.set
 
 keymap('i', 'jj', '<ESC>', opts)
 
+keymap('n', 'H', '^', opts)
+keymap('n', 'L', '$', opts)
+
 -- Better window navigation
 keymap('n', '<C-h>', '<C-w>h', opts)
 keymap('n', '<C-j>', '<C-w>j', opts)
