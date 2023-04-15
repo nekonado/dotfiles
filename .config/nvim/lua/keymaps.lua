@@ -58,7 +58,7 @@ keymap('n', '<leader>xx', '<cmd>TroubleToggle<CR>', opts)
 
 -- Build-in LSP Function
 keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-keymap('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+keymap('n', 'gf', '<cmd>lua vim.lsp.buf.format { async = true }<CR>')
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')

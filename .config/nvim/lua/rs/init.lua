@@ -11,5 +11,5 @@ require 'rs.scrollbar'
 require 'rs.telescope'
 
 -- require 'rs.lsp'
-require 'rs.lspX.lsp'
+require 'rs.lspX'
 require 'rs.color'
