@@ -138,6 +138,14 @@ require('packer').startup(function()
     end
   }
 
+  -- Packer
+  use({
+    "folke/noice.nvim",
+    requires = {
+      "rcarriga/nvim-notify",
+      }
+  })
+
   -- -----------
   -- opt
   -- -----------
