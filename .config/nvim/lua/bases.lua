@@ -1,2 +1,6 @@
 vim.cmd [[set nowrap]]
+vim.cmd [[set display=lastline]]
 vim.cmd [[set clipboard+=unnamedplus]]
+vim.cmd [[set showmatch]]
+vim.cmd [[set matchtime=2]]
+vim.cmd [[set pumheight=15]]
