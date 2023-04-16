@@ -109,6 +109,7 @@ require('packer').startup(function()
   use {
     'folke/trouble.nvim',
     requires = 'nvim-tree/nvim-web-devicons',
+  -- Packer
   }
 
   use 'jose-elias-alvarez/null-ls.nvim'
@@ -138,13 +139,15 @@ require('packer').startup(function()
     end
   }
 
-  -- Packer
   use({
     "folke/noice.nvim",
     requires = {
       "rcarriga/nvim-notify",
       }
   })
+
+  use 'RRethy/vim-illuminate'
+  use 'norcalli/nvim-colorizer.lua'
 
   -- -----------
   -- opt
