@@ -149,6 +149,8 @@ require('packer').startup(function()
   use 'RRethy/vim-illuminate'
   use 'norcalli/nvim-colorizer.lua'
 
+  use 'mvllow/modes.nvim'
+
   -- -----------
   -- opt
   -- -----------
