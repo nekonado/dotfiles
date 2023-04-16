@@ -151,6 +151,10 @@ require('packer').startup(function()
 
   use 'mvllow/modes.nvim'
 
+  use "lukas-reineke/indent-blankline.nvim"
+
+  use 'nvim-telescope/telescope-packer.nvim'
+
   -- -----------
   -- opt
   -- -----------
