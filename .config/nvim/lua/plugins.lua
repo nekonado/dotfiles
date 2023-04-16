@@ -1,6 +1,6 @@
 vim.cmd.packadd 'packer.nvim'
 
-require('packer').startup(function()
+require('packer').startup(function(use)
   -- -----------
   -- start
   -- -----------
@@ -109,7 +109,7 @@ require('packer').startup(function()
   use {
     'folke/trouble.nvim',
     requires = 'nvim-tree/nvim-web-devicons',
-  -- Packer
+    -- Packer
   }
 
   use 'jose-elias-alvarez/null-ls.nvim'
@@ -143,7 +143,7 @@ require('packer').startup(function()
     "folke/noice.nvim",
     requires = {
       "rcarriga/nvim-notify",
-      }
+    }
   })
 
   use 'RRethy/vim-illuminate'

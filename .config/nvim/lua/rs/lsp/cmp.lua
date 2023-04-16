@@ -1,6 +1,6 @@
-local status, cmp = pcall(require, "cmp")
-if (not status) then return end
-local lspkind = require 'lspkind'
+-- nvim-cmp
+local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
   snippet = {
@@ -8,11 +8,7 @@ cmp.setup({
       require('luasnip').lsp_expand(args.body)
     end,
   },
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = "buffer" },
-    { name = "path" },
-  },
+  enabled = true,
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -25,30 +21,19 @@ cmp.setup({
       select = true
     }),
   }),
-  experimental = {
-    ghost_text = true,
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
-  -- formatting = {
-  --   format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
-  -- }
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+    { name = 'path' },
+  }),
+  formatting = {
+    fields = { 'abbr', 'kind', 'menu' },
+    format = lspkind.cmp_format({
+      mode = 'text',
+    }),
+  },
 })
-
-vim.cmd [[
-  set completeopt=menuone,noinsert,noselect
-  highlight! default link CmpItemKind CmpItemMenuDefault
-]]
-
--- cmp.setup.cmdline('/', {
---   mapping = cmp.mapping.preset.cmdline(),
---   sources = {
---     { name = 'buffer' }
---   }
--- })
--- cmp.setup.cmdline(":", {
---   mapping = cmp.mapping.preset.cmdline(),
---   sources = {
---     { name = "path" },
---     { name = "cmdline" },
---   },
--- })
---

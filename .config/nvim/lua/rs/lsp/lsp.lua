@@ -22,7 +22,9 @@ mason_null_ls.setup({
   automatic_installation = true,
 })
 null_ls.setup({
-  sources = { null_ls.builtins.formatting.prettier },
+  sources = {
+    null_ls.builtins.formatting.prettier,
+  },
 })
 
 mason_lspconfig.setup({
@@ -42,6 +44,27 @@ mason_lspconfig.setup_handlers({
     lsp_config[server_name].setup(opts)
   end,
 })
+
+-- For Global definiton 'vim'
+-- https://github.com/neovim/nvim-lspconfig/blob/da7461b596d70fa47b50bf3a7acfaef94c47727d/doc/server_configurations.md#sumneko_lua
+lsp_config.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        globals = {'vim'},
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
 
 vim.api.nvim_create_autocmd({ 'CursorHold' }, {
   pattern = { '*' },
@@ -79,5 +102,3 @@ vim.keymap.set({ 'n' }, '<Plug>(lsp)f', vim.lsp.buf.format)
 vim.keymap.set({ 'n' }, '<Plug>(lsp)i', '<Cmd>Telescope lsp_implementations<CR>')
 vim.keymap.set({ 'n' }, '<Plug>(lsp)t', '<Cmd>Telescope lsp_type_definitions<CR>')
 vim.keymap.set({ 'n' }, '<Plug>(lsp)rf', '<Cmd>Telescope lsp_references<CR>')
-
-
