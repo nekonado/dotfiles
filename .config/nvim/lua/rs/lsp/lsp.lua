@@ -102,13 +102,13 @@ end
 -- map prefix
 vim.keymap.set({ 'n', 'x' }, '<Space>', '<Nop>')
 vim.keymap.set({ 'n', 'x' }, '<Plug>(lsp)', '<Nop>')
-vim.keymap.set({ 'n', 'x' }, 'g', '<Plug>(lsp)')
+vim.keymap.set({ 'n', 'x' }, 'm', '<Plug>(lsp)')
 
 vim.keymap.set({ 'n' }, 'K', show_documentation)
 vim.keymap.set({ 'n' }, '<Plug>(lsp)f', vim.lsp.buf.format)
 vim.keymap.set({ 'n' }, '<Plug>(lsp)r', '<Cmd>Telescope lsp_references<CR>')
-vim.keymap.set({ 'n' }, '<Plug>(lsp)d', '<Cmd>Telescope lsp_definitions<CR>')
--- vim.keymap.set({ 'n' }, '<Plug>(lsp)d', vim.lsp.buf.definition)
+vim.keymap.set({ 'n' }, '<Plug>(lsp)dd', vim.lsp.buf.definition)
+vim.keymap.set({ 'n' }, '<Plug>(lsp)dv', ':vsplit | lua vim.lsp.buf.definition()<CR>')
 vim.keymap.set({ 'n' }, '<Plug>(lsp)t', '<Cmd>Telescope lsp_type_definitions<CR>')
 vim.keymap.set({ 'n' }, '<Plug>(lsp)i', '<Cmd>Telescope lsp_implementations<CR>')
 vim.keymap.set({ 'n' }, '<Plug>(lsp)n', require('lspsaga.rename').rename)
@@ -117,4 +117,3 @@ vim.keymap.set({ 'n' }, '<Plug>(lsp)e', '<Cmd>Telescope diagnostics<CR>')
 vim.keymap.set({ 'n' }, '<Plug>(lnp)]', require('lspsaga.diagnostic').navigate('next'))
 vim.keymap.set({ 'n' }, '<Plug>(lsp)[', require('lspsaga.diagnostic').navigate('prev'))
 vim.keymap.set({ 'n' }, '<Plug>(lsp)q', '<Cmd>Telescope quickfix<CR>')
-
