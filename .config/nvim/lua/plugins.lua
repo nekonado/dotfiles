@@ -4,19 +4,11 @@ require('packer').startup(function(use)
   -- -----------
   -- start
   -- -----------
-  -- vimdoc-ja
   use 'vim-jp/vimdoc-ja'
 
-  -- Color Scheme
-  -- use "EdenEast/nightfox.nvim"
   use 'folke/tokyonight.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
 
   use 'petertriho/nvim-scrollbar'
-
   use 'tkmpypy/chowcho.nvim'
 
   use {
@@ -29,10 +21,6 @@ require('packer').startup(function(use)
   }
   use 'p00f/nvim-ts-rainbow'
 
-  -- use {
-  --   'nvim-telescope/telescope.nvim',
-  --   tag = '0.1.1'
-  -- }
   use 'nvim-telescope/telescope.nvim'
 
   use {

@@ -1,10 +1,3 @@
--- vim.g.mapleader = ' '
-vim.keymap.set({ 'n', 'x' }, '<Space>', '<Nop>')
-vim.keymap.set({ 'n', 'x' }, '<Plug>(lsp)', '<Nop>')
-vim.keymap.set({ 'n', 'x' }, 'm', '<Plug>(lsp)')
-vim.keymap.set({ 'n', 'x' }, '<Plug>(ff)', '<Nop>')
-vim.keymap.set({ 'n', 'x' }, ';', '<Plug>(ff)')
-
 -- nvim-lsp
 local lsp_config = require('lspconfig')
 local mason = require('mason')
@@ -92,13 +85,3 @@ local function show_documentation()
   end
 end
 
-vim.keymap.set({ 'n' }, 'K', show_documentation)
-vim.keymap.set({ 'n' }, '<Plug>(lsp)a', require('lspsaga.codeaction').code_action)
-vim.keymap.set({ 'n' }, '<Plug>(lsp)rn', require('lspsaga.rename').rename)
-vim.keymap.set({ 'n' }, '<Plug>(lsp)q', '<Cmd>Telescope diagnostics<CR>')
-vim.keymap.set({ 'n' }, '<Plug>(lsp)n', require('lspsaga.diagnostic').navigate('next'))
-vim.keymap.set({ 'n' }, '<Plug>(lsp)p', require('lspsaga.diagnostic').navigate('prev'))
-vim.keymap.set({ 'n' }, '<Plug>(lsp)f', vim.lsp.buf.format)
-vim.keymap.set({ 'n' }, '<Plug>(lsp)i', '<Cmd>Telescope lsp_implementations<CR>')
-vim.keymap.set({ 'n' }, '<Plug>(lsp)t', '<Cmd>Telescope lsp_type_definitions<CR>')
-vim.keymap.set({ 'n' }, '<Plug>(lsp)rf', '<Cmd>Telescope lsp_references<CR>')

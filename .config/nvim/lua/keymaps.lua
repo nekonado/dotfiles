@@ -1,6 +1,8 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
+keymap({ 'n', 'x' }, '<Space>', '<NOP>')
+
 keymap('i', 'jj', '<ESC>', opts)
 
 keymap('n', 'H', '0', opts)
