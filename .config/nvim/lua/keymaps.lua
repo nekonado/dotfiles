@@ -1,8 +1,6 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
-keymap({ 'n', 'x' }, '<Space>', '<NOP>')
-
 keymap('i', 'jj', '<ESC>', opts)
 
 keymap('n', 'H', '0', opts)
@@ -13,14 +11,14 @@ keymap('n', 'P', ']P', opts)
 keymap('n', '+', '<C-a>', opts)
 keymap('n', '-', '<C-x>', opts)
 
+keymap('n', ';', ':', opts)
+keymap("i", ",", ",<Space>", opts)
+
 -- Better window navigation
 keymap('n', '<C-h>', '<C-w>h', opts)
 keymap('n', '<C-j>', '<C-w>j', opts)
 keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
-
-keymap('n', ';', ':', opts)
-keymap("i", ",", ",<Space>", opts)
 
 -- terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', opts)
@@ -30,14 +28,13 @@ keymap('t', '<C-c>', '<C-\\><C-n>', opts)
 keymap('n', '<leader>a', 'ggVG', opts)
 keymap('n', '<leader>h', '^', opts)
 keymap('n', '<leader>l', '$', opts)
+keymap('n', '<leader>w', '<cmd>Chowcho<CR>', opts)
+keymap('n', '<leader>e', '<cmd>Neotree<CR>', opts)
 
 -- HopNvim
 keymap('n', 'hw', '<cmd>HopWord<CR>', opts)
 keymap('n', 'hp', '<cmd>HopPattern<CR>', opts)
 keymap('n', 'ht', '<cmd>HopChar2<CR>', opts)
-
-keymap('n', '<leader>w', '<cmd>Chowcho<CR>', opts)
-keymap('n', '<leader>e', '<cmd>Neotree<CR>', opts)
 
 -- Telescope
 keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', {})
@@ -57,20 +54,6 @@ keymap('n', '<leader>tf', '<cmd>ToggleTerm direction=float<CR>', opts)
 
 -- Trouble
 keymap('n', '<leader>xx', '<cmd>TroubleToggle<CR>', opts)
-
--- Build-in LSP Function
-keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-keymap('n', 'gf', '<cmd>lua vim.lsp.buf.format { async = true }<CR>')
-keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-keymap('n', 'gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
-keymap('n', 'gn', '<cmd>lua vim.lsp.buf.rename()<CR>')
-keymap('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-keymap('n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>')
-keymap('n', 'g]', '<cmd>lua vim.diagnostic.goto_next()<CR>')
-keymap('n', 'g[', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 
 -- place this in one of your configuration file(s)
 local hop = require('hop')
