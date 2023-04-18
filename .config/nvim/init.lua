@@ -3,9 +3,9 @@ if vim.g.vscode then
 else
   -- ordinary Neovim
   require 'bases'
-  require 'plugins'
+  require 'options'
   require 'keymaps'
   require 'autocmds'
-  require 'options'
+  require 'plugins'
   require 'rs'
 end
