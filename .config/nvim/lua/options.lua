@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+vim.g.mapleader = ' '
+
 opt.helplang = 'ja'
 opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
