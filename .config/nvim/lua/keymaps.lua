@@ -26,8 +26,8 @@ keymap('t', '<C-c>', '<C-\\><C-n>', opts)
 
 -- leader key
 keymap('n', '<leader>a', 'ggVG', opts)
-keymap('n', '<leader>h', '^', opts)
-keymap('n', '<leader>l', '$', opts)
+keymap('n', '<leader>o', 'o<ESC>', opts)
+keymap('n', '<leader>O', 'O<ESC>', opts)
 keymap('n', '<leader>w', '<cmd>Chowcho<CR>', opts)
 keymap('n', '<leader>e', '<cmd>Neotree<CR>', opts)
 
