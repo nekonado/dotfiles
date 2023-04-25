@@ -7,7 +7,7 @@ require('packer').startup({
     -- -----------
     use 'vim-jp/vimdoc-ja'
 
-    -- use 'folke/tokyonight.nvim'
+
     use { "catppuccin/nvim", as = "catppuccin" }
 
     use 'petertriho/nvim-scrollbar'
@@ -150,6 +150,7 @@ require('packer').startup({
     -- opt
     -- -----------
     use { 'wbthomason/packer.nvim', opt = true }
+    -- use { 'folke/tokyonight.nvim', opt = true }
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
