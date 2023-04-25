@@ -21,3 +21,4 @@ opt.number = true
 opt.relativenumber = true
 opt.signcolumn = 'yes'
 opt.cursorline = true
+opt.laststatus = 3

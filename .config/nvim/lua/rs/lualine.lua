@@ -4,10 +4,11 @@ if (not status) then return end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'tokyonight',
+    theme = 'catppuccin',
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
-    disabled_filetypes = {}
+    disabled_filetypes = {},
+    globalstatus = true
   },
   sections = {
     lualine_a = { 'mode' },
