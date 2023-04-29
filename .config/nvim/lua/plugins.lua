@@ -34,7 +34,8 @@ require('packer').startup({
 
     use 'simeji/winresizer'
 
-    use 'tpope/vim-commentary'
+    -- use 'tpope/vim-commentary'
+    use 'numToStr/Comment.nvim'
 
     use {
       'phaazon/hop.nvim',

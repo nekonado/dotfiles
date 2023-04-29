@@ -1,4 +1,5 @@
 -- Re Export
+require 'rs.Comment'
 require 'rs.bufferline'
 require 'rs.chowcho'
 require 'rs.gitsigns'
