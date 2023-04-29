@@ -18,6 +18,7 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.prettier,
   },
+  diagnostics_format = "#{m} (#{s}: #{c})",
 })
 
 mason_lspconfig.setup({

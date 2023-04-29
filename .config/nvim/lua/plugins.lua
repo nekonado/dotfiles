@@ -7,7 +7,6 @@ require('packer').startup({
     -- -----------
     use 'vim-jp/vimdoc-ja'
 
-    -- use { "catppuccin/nvim", as = "catppuccin" }
     use 'folke/tokyonight.nvim'
 
     use 'petertriho/nvim-scrollbar'

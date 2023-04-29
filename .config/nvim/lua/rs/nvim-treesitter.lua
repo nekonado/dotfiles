@@ -4,16 +4,15 @@ if (not status) then return end
 ts.setup {
   highlight = {
     enable = true,
-    disable = {},
   },
-  indent = {
-    enable = true,
-    disable = {},
-  },
+  -- indent = {
+  --   -- enable = true,
+  --   -- disable = {},
+  -- },
   ensure_installed = {
-    "tsx",
-    "typescript",
     "javascript",
+    "typescript",
+    "tsx",
     "json",
     "yaml",
     "html",
@@ -25,8 +24,8 @@ ts.setup {
   },
   rainbow = {
     enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
+    -- disable = { "tsx" },
+    extended_mode = false,
+    max_file_lines = 1000,
   }
 }
-
