@@ -14,6 +14,13 @@ keymap('n', '-', '<C-x>', opts)
 keymap('n', ';', ':', opts)
 keymap("i", ",", ",<Space>", opts)
 
+-- Emacs style text edit
+keymap('i', '<C-a>', '<C-o>0', opts)
+keymap('i', '<C-e>', '<C-o>$', opts)
+keymap('i', '<C-h>', '<BS>', opts)
+keymap('i', '<C-d>', '<Del>', opts)
+keymap('i', '<C-k>', '<C-o>D', opts)
+
 -- Better window navigation
 keymap('n', '<C-h>', '<C-w>h', opts)
 keymap('n', '<C-j>', '<C-w>j', opts)
