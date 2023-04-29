@@ -38,8 +38,10 @@ mason_lspconfig.setup_handlers({
   end,
 })
 
--- For Global definition 'vim'
+-- diagnostics.global is needed for definition 'vim'
 -- https://github.com/neovim/nvim-lspconfig/blob/da7461b596d70fa47b50bf3a7acfaef94c47727d/doc/server_configurations.md#sumneko_lua
+-- workspace.checkThirdParty is needed for silence notifications
+-- https://github.com/neovim/nvim-lspconfig/issues/1700
 lsp_config.lua_ls.setup {
   settings = {
     Lua = {
@@ -51,6 +53,7 @@ lsp_config.lua_ls.setup {
       },
       workspace = {
         library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
       },
       telemetry = {
         enable = false,

@@ -7,8 +7,8 @@ require('packer').startup({
     -- -----------
     use 'vim-jp/vimdoc-ja'
 
-
-    use { "catppuccin/nvim", as = "catppuccin" }
+    -- use { "catppuccin/nvim", as = "catppuccin" }
+    use 'folke/tokyonight.nvim'
 
     use 'petertriho/nvim-scrollbar'
     use 'tkmpypy/chowcho.nvim'
@@ -135,7 +135,7 @@ require('packer').startup({
       }
     })
 
-    use 'RRethy/vim-illuminate'
+    -- use 'RRethy/vim-illuminate'
     use 'norcalli/nvim-colorizer.lua'
 
     use 'mvllow/modes.nvim'
@@ -143,14 +143,11 @@ require('packer').startup({
     use "lukas-reineke/indent-blankline.nvim"
 
     use 'nvim-telescope/telescope-packer.nvim'
-    -- use 'nvim-lua/popup.nvim'
-    -- use 'nvim-telescope/telescope-media-files.nvim'
 
     -- -----------
     -- opt
     -- -----------
     use { 'wbthomason/packer.nvim', opt = true }
-    -- use { 'folke/tokyonight.nvim', opt = true }
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
