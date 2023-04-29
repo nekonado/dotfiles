@@ -2,17 +2,22 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 keymap('i', 'jj', '<ESC>', opts)
+keymap('n', ';', ':', opts)
 
 keymap('n', 'H', '0', opts)
 keymap('n', 'L', '$', opts)
 
 keymap('n', 'Y', 'y$', opts)
 keymap('n', 'P', ']P', opts)
+keymap('n', 'U', '<C-r>', opts)
 keymap('n', '+', '<C-a>', opts)
 keymap('n', '-', '<C-x>', opts)
 
-keymap('n', ';', ':', opts)
-keymap("i", ",", ",<Space>", opts)
+-- Better window navigation
+keymap('n', '<C-h>', '<C-w>h', opts)
+keymap('n', '<C-j>', '<C-w>j', opts)
+keymap('n', '<C-k>', '<C-w>k', opts)
+keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- Emacs style text edit
 keymap('i', '<C-a>', '<C-o>0', opts)
@@ -21,11 +26,9 @@ keymap('i', '<C-h>', '<BS>', opts)
 keymap('i', '<C-d>', '<Del>', opts)
 keymap('i', '<C-k>', '<C-o>D', opts)
 
--- Better window navigation
-keymap('n', '<C-h>', '<C-w>h', opts)
-keymap('n', '<C-j>', '<C-w>j', opts)
-keymap('n', '<C-k>', '<C-w>k', opts)
-keymap('n', '<C-l>', '<C-w>l', opts)
+-- Better switch visual mode
+keymap('n', 'v', '<C-v>', opts)
+keymap('n', '<C-v>', 'v', opts)
 
 -- terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', opts)
@@ -80,4 +83,4 @@ keymap('', 'T', function()
 end, { remap = true })
 
 -- lua program execution
-keymap('n', '<F5>', '<cmd>luafile %<CR>', opt)
+keymap('n', '<F5>', '<cmd>luafile %<CR>', opts)
