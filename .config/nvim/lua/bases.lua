@@ -1,4 +1,3 @@
-vim.cmd [[set nowrap]]
 vim.cmd [[set sidescroll=5]]
 vim.cmd [[set list listchars+=precedes:<,extends:>]]
 vim.cmd [[set display=lastline]]

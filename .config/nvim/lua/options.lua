@@ -4,6 +4,7 @@ vim.g.mapleader = ' '
 
 opt.helplang = 'ja'
 opt.encoding = 'utf-8'
+opt.wrap = false
 opt.fileencoding = 'utf-8'
 opt.smartcase = true
 opt.splitright = true
