@@ -1,5 +1,3 @@
-vim.cmd [[set sidescroll=5]]
-vim.cmd [[set list listchars+=precedes:<,extends:>]]
 vim.cmd [[set display=lastline]]
 vim.cmd [[set clipboard+=unnamedplus]]
 vim.cmd [[set showmatch]]

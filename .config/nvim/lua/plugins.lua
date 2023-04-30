@@ -145,6 +145,7 @@ require('packer').startup({
     use 'nvim-telescope/telescope-packer.nvim'
 
     use 'booperlv/nvim-gomove'
+    use 'RRethy/vim-illuminate'
 
     -- -----------
     -- opt

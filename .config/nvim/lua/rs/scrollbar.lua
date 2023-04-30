@@ -1,4 +1,3 @@
--- local colors =require("catppuccin.palettes").get_palette()
 local colors = require("tokyonight.colors").setup()
 
 require("scrollbar").setup({

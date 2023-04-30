@@ -4,8 +4,14 @@ vim.g.mapleader = ' '
 
 opt.helplang = 'ja'
 opt.encoding = 'utf-8'
-opt.wrap = false
 opt.fileencoding = 'utf-8'
+
+opt.wrap = false
+opt.sidescroll = 5
+opt.list = true
+opt.listchars = 'precedes:<,extends:>'
+-- vim.cmd [[set list listchars+=precedes:<,extends:>]]
+
 opt.smartcase = true
 opt.splitright = true
 opt.termguicolors = true
