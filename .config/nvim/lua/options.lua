@@ -11,7 +11,8 @@ opt.display = 'lastline'
 opt.sidescroll = 5
 opt.list = true
 opt.listchars = 'precedes:<,extends:>'
--- vim.cmd [[set list listchars+=precedes:<,extends:>]]
+opt.whichwrap = '<,>,[,],h,l,b,s'
+opt.backspace = 'indent,eol,start'
 
 opt.autoindent = true
 opt.smartindent = true
@@ -42,5 +43,5 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.autoread = true
 opt.cursorline = true
-opt.laststatus = 300
+opt.laststatus = 2
 

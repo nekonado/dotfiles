@@ -1,4 +1,8 @@
 local status, _ = pcall(require, "tokyonight")
-if (not status) then return end
+require('tokyonight').setup({
+  on_colors = function(colors)
+    colors.border = "#27a1b9"
+  end
+})
 
 vim.cmd [[colorscheme tokyonight-night]]
