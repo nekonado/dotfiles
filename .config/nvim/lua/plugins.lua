@@ -8,6 +8,10 @@ require('packer').startup({
     use 'vim-jp/vimdoc-ja'
 
     use 'folke/tokyonight.nvim'
+    -- use {
+    --   'CosmicNvim/cosmic-ui',
+    --   requires = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
+    -- }
 
     use 'petertriho/nvim-scrollbar'
     use 'tkmpypy/chowcho.nvim'
