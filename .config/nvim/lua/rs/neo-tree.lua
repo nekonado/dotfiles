@@ -1,5 +1,5 @@
 require("neo-tree").setup({
-  close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+  close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
   popup_border_style = "rounded",
   enable_git_status = true,
   enable_diagnostics = true,
@@ -75,7 +75,7 @@ require("neo-tree").setup({
     mappings = {
       ["<space>"] = {
         "toggle_node",
-        nowait = false,   -- disable `nowait` if you have existing combos starting with this char that you want to use
+        nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
       },
       ["<2-LeftMouse>"] = "open",
       ["<cr>"] = "open",
@@ -174,7 +174,7 @@ require("neo-tree").setup({
         ["]g"] = "next_git_modified",
       },
       fuzzy_finder_mappings = {
-                                -- define keymaps for filter popup window in fuzzy_finder_mode
+        -- define keymaps for filter popup window in fuzzy_finder_mode
         ["<down>"] = "move_cursor_down",
         ["<C-n>"] = "move_cursor_down",
         ["<up>"] = "move_cursor_up",

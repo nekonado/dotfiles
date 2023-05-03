@@ -2,6 +2,7 @@ local status, telescope = pcall(require, 'telescope')
 if (not status) then return end
 
 telescope.load_extension 'packer'
+telescope.load_extension 'noice'
 -- telescope.load_extension 'media_files'
 
 telescope.setup({
@@ -14,10 +15,11 @@ telescope.setup({
       i = {
         ['<C-g>'] = require('telescope.actions').close,
       },
-    },
-  },
+    }
+  }
+
   -- extensions = {
-  --   media_files = {
+  --   media_files = require("telescope").load_extension("noice"){
   --     -- filetypes whitelist
   --     -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
   --     filetypes = { "png", "webp", "jpg", "jpeg" },
