@@ -125,12 +125,7 @@ require('packer').startup({
       }
     }
     -- Greeter 4 Neovim
-    use {
-      'goolord/alpha-nvim',
-      config = function()
-        require 'alpha'.setup(require 'alpha.themes.startify'.config)
-      end
-    }
+    use 'goolord/alpha-nvim'
 
     use({
       "folke/noice.nvim",

@@ -3,7 +3,6 @@ if (not status) then return end
 
 telescope.load_extension 'packer'
 telescope.load_extension 'noice'
--- telescope.load_extension 'media_files'
 
 telescope.setup({
   defaults = {
@@ -17,14 +16,4 @@ telescope.setup({
       },
     }
   }
-
-  -- extensions = {
-  --   media_files = require("telescope").load_extension("noice"){
-  --     -- filetypes whitelist
-  --     -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-  --     filetypes = { "png", "webp", "jpg", "jpeg" },
-  --     -- find command (defaults to `fd`)
-  --     find_cmd = "rg"
-  --   }
-  -- },
 })

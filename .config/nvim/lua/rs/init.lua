@@ -1,7 +1,8 @@
 -- Re Export
-require 'rs.Comment'
+require 'rs.alpha'
 require 'rs.bufferline'
 require 'rs.chowcho'
+require 'rs.Comment'
 require 'rs.gitsigns'
 require 'rs.gomove'
 require 'rs.lualine'
