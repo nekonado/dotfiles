@@ -37,6 +37,8 @@ opt.showmatch = true
 opt.matchtime = 2
 
 opt.termguicolors = true
+opt.pumblend = 5
+
 opt.pumheight = 15
 opt.updatetime = 300
 opt.tabstop = 2
@@ -44,4 +46,3 @@ opt.shiftwidth = 2
 opt.autoread = true
 opt.cursorline = true
 opt.laststatus = 2
-

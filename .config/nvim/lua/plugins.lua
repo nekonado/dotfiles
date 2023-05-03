@@ -8,10 +8,7 @@ require('packer').startup({
     use 'vim-jp/vimdoc-ja'
 
     use 'folke/tokyonight.nvim'
-    -- use {
-    --   'CosmicNvim/cosmic-ui',
-    --   requires = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
-    -- }
+    -- use { "catppuccin/nvim", as = "catppuccin" }
 
     use 'petertriho/nvim-scrollbar'
     use 'tkmpypy/chowcho.nvim'
@@ -35,10 +32,10 @@ require('packer').startup({
       end,
       requires = { "kkharji/sqlite.lua" }
     }
+    use 'nvim-telescope/telescope-packer.nvim'
 
     use 'simeji/winresizer'
 
-    -- use 'tpope/vim-commentary'
     use 'numToStr/Comment.nvim'
 
     use {
@@ -142,14 +139,12 @@ require('packer').startup({
       }
     }
 
-    -- use 'RRethy/vim-illuminate'
     use 'norcalli/nvim-colorizer.lua'
 
     use 'mvllow/modes.nvim'
 
     use "lukas-reineke/indent-blankline.nvim"
 
-    use 'nvim-telescope/telescope-packer.nvim'
 
     use 'booperlv/nvim-gomove'
     use 'RRethy/vim-illuminate'

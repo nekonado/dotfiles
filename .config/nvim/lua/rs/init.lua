@@ -1,5 +1,6 @@
 -- Re Export
 require 'rs.alpha'
+require 'rs.barbar'
 require 'rs.bufferline'
 require 'rs.chowcho'
 require 'rs.Comment'

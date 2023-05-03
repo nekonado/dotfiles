@@ -50,12 +50,12 @@ scheme.setup({
     }
     hl.TelescopePromptBorder = {
       bg = c.bg_dark,
-      fg = c.purple,
+      fg = c.orange,
     }
-    -- hl.TelescopePromptTitle = {
-    --   bg = prompt,
-    --   fg = prompt,
-    -- }
+    hl.telescopeprompttitle = {
+      -- bg = prompt,
+      fg = c.orange,
+    }
     -- hl.TelescopePreviewTitle = {
     --   bg = c.bg_dark,
     --   fg = c.bg_dark,
