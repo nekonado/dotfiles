@@ -109,6 +109,8 @@ require('packer').startup({
     use 'tami5/lspsaga.nvim'
     use 'ray-x/lsp_signature.nvim'
 
+    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+
     -- Unless you are still migrating, remove the deprecated commands from v1.x
     vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
