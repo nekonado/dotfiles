@@ -90,6 +90,7 @@ require('packer').startup({
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
+    use 'ray-x/cmp-treesitter'
 
     use 'onsails/lspkind.nvim'
 
