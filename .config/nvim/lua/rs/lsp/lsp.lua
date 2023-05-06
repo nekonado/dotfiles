@@ -9,6 +9,10 @@ require('dressing').setup()
 require('lspsaga').setup()
 require('lsp_signature').setup({ hint_enable = false })
 
+vim.diagnostic.config {
+  virtual_text = false,
+}
+
 mason.setup()
 mason_null_ls.setup({
   ensure_installed = { 'prettier' },
