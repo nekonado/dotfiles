@@ -2,13 +2,9 @@ vim.cmd.packadd 'packer.nvim'
 
 require('packer').startup({
   function(use)
-    -- -----------
-    -- start
-    -- -----------
     use 'vim-jp/vimdoc-ja'
 
     use 'folke/tokyonight.nvim'
-    -- use { "catppuccin/nvim", as = "catppuccin" }
 
     use 'petertriho/nvim-scrollbar'
     use 'tkmpypy/chowcho.nvim'
@@ -151,10 +147,8 @@ require('packer').startup({
 
     use 'booperlv/nvim-gomove'
     use 'RRethy/vim-illuminate'
+    use 'kevinhwang91/nvim-hlslens'
 
-    -- -----------
-    -- opt
-    -- -----------
     use { 'wbthomason/packer.nvim', opt = true }
     use {
       'nvim-lualine/lualine.nvim',
