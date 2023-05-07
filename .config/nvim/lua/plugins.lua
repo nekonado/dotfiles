@@ -3,30 +3,22 @@ vim.cmd.packadd 'packer.nvim'
 require('packer').startup({
   function(use)
     use 'vim-jp/vimdoc-ja'
-
     use 'folke/tokyonight.nvim'
-
     use 'petertriho/nvim-scrollbar'
     use 'tkmpypy/chowcho.nvim'
-
     use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
     }
-    use {
-      'm-demare/hlargs.nvim',
-      requires = { 'nvim-treesitter/nvim-treesitter' }
-    }
+    -- highlight arguments using treesiter
+    use 'm-demare/hlargs.nvim'
     use 'p00f/nvim-ts-rainbow'
-
     use 'nvim-telescope/telescope.nvim'
+    use 'nvim-telescope/telescope-live-grep-args.nvim'
 
     use {
-      "nvim-telescope/telescope-frecency.nvim",
-      config = function()
-        require "telescope".load_extension("frecency")
-      end,
-      requires = { "kkharji/sqlite.lua" }
+      'nvim-telescope/telescope-frecency.nvim',
+      requires = { 'kkharji/sqlite.lua' }
     }
     use 'nvim-telescope/telescope-packer.nvim'
 
@@ -46,7 +38,7 @@ require('packer').startup({
       'akinsho/toggleterm.nvim',
       tag = '*',
       config = function()
-        require("toggleterm").setup()
+        require('toggleterm').setup()
       end
     }
 
@@ -58,17 +50,17 @@ require('packer').startup({
       requires = 'nvim-lua/plenary.nvim'
     }
     use {
-      "lewis6991/gitsigns.nvim",
+      'lewis6991/gitsigns.nvim',
       config = function()
         require('gitsigns').setup()
-        require("scrollbar.handlers.gitsigns").setup()
+        require('scrollbar.handlers.gitsigns').setup()
       end
     }
 
     use {
       'kwkarlwang/bufresize.nvim',
       config = function()
-        require("bufresize").setup()
+        require('bufresize').setup()
       end
     }
 
@@ -90,7 +82,7 @@ require('packer').startup({
 
     use 'onsails/lspkind.nvim'
 
-    use "L3MON4D3/LuaSnip"
+    use 'L3MON4D3/LuaSnip'
 
     -- use 'kkharji/lspsaga.nvim'
     use 'folke/lsp-colors.nvim'
@@ -106,27 +98,27 @@ require('packer').startup({
     use 'tami5/lspsaga.nvim'
     use 'ray-x/lsp_signature.nvim'
 
-    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+    use 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
 
     -- Unless you are still migrating, remove the deprecated commands from v1.x
     vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
     use {
-      "nvim-neo-tree/neo-tree.nvim",
-      branch = "v2.x",
+      'nvim-neo-tree/neo-tree.nvim',
+      branch = 'v2.x',
       requires = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-        "MunifTanjim/nui.nvim",
+        'nvim-lua/plenary.nvim',
+        'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+        'MunifTanjim/nui.nvim',
       }
     }
     -- Greeter 4 Neovim
     use 'goolord/alpha-nvim'
 
     use({
-      "folke/noice.nvim",
+      'folke/noice.nvim',
       requires = {
-        "rcarriga/nvim-notify",
+        'rcarriga/nvim-notify',
       }
     })
 
@@ -142,7 +134,7 @@ require('packer').startup({
 
     use 'mvllow/modes.nvim'
 
-    use "lukas-reineke/indent-blankline.nvim"
+    use 'lukas-reineke/indent-blankline.nvim'
 
 
     use 'booperlv/nvim-gomove'

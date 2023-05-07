@@ -54,7 +54,8 @@ keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', {})
 keymap('n', '<leader>fs', '<cmd>Telescope git_status<CR>', {})
 keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', {})
 keymap('n', '<leader>fr', '<cmd>Telescope registers<CR>', {})
-keymap('n', '<leader>fh', '<cmd>Telescope help_tags', {})
+keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', {})
+keymap("n", "<leader>fl", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
 
 -- ToggleTerm
 keymap('n', '<leader>th', '<cmd>ToggleTerm direction=horizontal<CR>', opts)

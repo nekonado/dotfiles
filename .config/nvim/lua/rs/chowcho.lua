@@ -1,8 +1,10 @@
+local colors = require("tokyonight.colors").setup()
+
 require('chowcho').setup {
   icon_enabled = true, -- required 'nvim-web-devicons' (default: false)
-  text_color = '#FFFFFF',
-  -- bg_color = '#555555',
-  active_border_color = '#FF8700',
+  text_color = colors.fg,
+  -- bg_color = colors.orange,
+  active_border_color = colors.orange,
   border_style = 'rounded', -- 'default', 'rounded',
   use_exclude_default = false,
   exclude = function(buf, win)
