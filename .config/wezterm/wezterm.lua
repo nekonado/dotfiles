@@ -1,6 +1,8 @@
 local wezterm = require 'wezterm'
 local config = {}
 
+local tokyonight_orange = "#ff9e64"
+
 config = {
   keys = {
     -- ctrl+'-'で上下に分割
@@ -10,7 +12,7 @@ config = {
     -- ctrl+'['でpane間を移動
     { key = '[',  mods = 'CTRL', action = wezterm.action.PaneSelect }
   },
-  colors = { split = '#ff8700' },
+  colors = { split = tokyonight_orange },
   color_scheme = 'tokyonight_night',
   font_size = 14.0,
   text_background_opacity = 1.00,

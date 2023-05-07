@@ -29,6 +29,7 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = 'path' },
+    { name = 'treesitter' }
   }),
   formatting = {
     fields = { 'abbr', 'kind', 'menu' },
