@@ -134,12 +134,15 @@ require('packer').startup({
 
     use 'mvllow/modes.nvim'
 
-    use 'lukas-reineke/indent-blankline.nvim'
+    use 'lukas-reineke/indent-blankline.nvim' -- Packer
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
 
     use 'booperlv/nvim-gomove'
     use 'RRethy/vim-illuminate'
     use 'kevinhwang91/nvim-hlslens'
+
+    use 'rhysd/git-messenger.vim'
 
     use { 'wbthomason/packer.nvim', opt = true }
     use {
