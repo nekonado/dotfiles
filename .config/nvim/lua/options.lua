@@ -46,3 +46,5 @@ opt.shiftwidth = 2
 opt.autoread = true
 opt.cursorline = true
 opt.laststatus = 2
+
+vim.fn.setenv('FIG_TERM', nil)
