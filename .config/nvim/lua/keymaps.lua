@@ -49,6 +49,7 @@ keymap('n', '<leader>e', '<cmd>Neotree<CR>', op_nr)
 keymap('n', 'hw', '<cmd>HopWord<CR>', op_nr)
 keymap('n', 'hp', '<cmd>HopPattern<CR>', op_nr)
 keymap('n', 'ht', '<cmd>HopChar2<CR>', op_nr)
+keymap('n', 'hl', '<cmd>HopLine<CR>', op_nr)
 
 -- Telescope
 keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', {})

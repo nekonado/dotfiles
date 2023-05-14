@@ -10,5 +10,4 @@
 ![wezterm-capture](https://github.com/queuek/dotfiles/blob/main/img/nvim-20230514-1.png)
 
 ## TODO
-- preview image
-
+- preview image file
