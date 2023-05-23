@@ -1,0 +1,5 @@
+<application>
+  <component name="github-copilot">
+    <option name="showIdeCompletions" value="true" />
+  </component>
+</application>
