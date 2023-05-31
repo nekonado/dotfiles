@@ -148,6 +148,7 @@ require("neo-tree").setup({
       never_show_by_pattern = { -- uses glob style patterns
         --".null-ls_*",
       },
+
     },
     follow_current_file = false,            -- This will find and focus the file in the active buffer every
     -- time the current file is changed while the tree is open.
@@ -172,6 +173,7 @@ require("neo-tree").setup({
         ["<c-x>"] = "clear_filter",
         ["[g"] = "prev_git_modified",
         ["]g"] = "next_git_modified",
+        ["<leader>p"] = "image_wezterm", -- " or another map
       },
       fuzzy_finder_mappings = {
         -- define keymaps for filter popup window in fuzzy_finder_mode
@@ -180,7 +182,16 @@ require("neo-tree").setup({
         ["<up>"] = "move_cursor_up",
         ["<C-p>"] = "move_cursor_up",
       },
-    }
+
+    },
+    commands = {
+      image_wezterm = function(state)
+        local node = state.tree:get_node()
+        if node.type == "file" then
+          require("image_preview").PreviewImage(node.path)
+        end
+      end,
+    },
   },
   buffers = {
     follow_current_file = true, -- This will find and focus the file in the active buffer every

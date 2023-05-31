@@ -144,6 +144,8 @@ require('packer').startup({
     use 'rhysd/git-messenger.vim'
     use 'github/copilot.vim'
 
+    use 'adelarsq/image_preview.nvim'
+
     use { 'wbthomason/packer.nvim', opt = true }
     use {
       'nvim-lualine/lualine.nvim',
