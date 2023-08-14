@@ -6,3 +6,6 @@ eval "$(rbenv init -)"
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 eval "$(starship init zsh)"
+
+# Git command aliases
+alias 'gmr'='git merge $(git remote)/$(git branch --contains | cut -d " " -f 2)'
