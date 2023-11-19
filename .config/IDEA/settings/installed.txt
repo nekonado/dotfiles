@@ -1,5 +1,0 @@
-com.github.catppuccin.jetbrains
-com.intellij.ja
-io.fig.jetbrains
-IdeaVIM
-com.github.copilot
