@@ -1,4 +1,5 @@
 # Summary
+
 - Working environment with the following software
   - Wezterm
   - Neovim
@@ -13,4 +14,5 @@
 ![wezterm-capture](https://github.com/queuek/dotfiles/blob/main/img/nvim-20230503-3.png)
 
 ## TODO
+
 ✅ preview image file
