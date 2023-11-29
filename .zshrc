@@ -9,3 +9,4 @@ eval "$(starship init zsh)"
 
 # Git command aliases
 alias 'gmr'='git merge $(git remote)/$(git branch --contains | cut -d " " -f 2)'
+alias 'ghk'='git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -d'
